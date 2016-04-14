@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A775C2681CBBE04200F57F52 /* CedHTTPOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775C2671CBBE04200F57F52 /* CedHTTPOperation.swift */; };
 		A7E660141CBB4A9E00694C28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E660131CBB4A9E00694C28 /* AppDelegate.swift */; };
 		A7E660161CBB4A9E00694C28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E660151CBB4A9E00694C28 /* ViewController.swift */; };
 		A7E660191CBB4A9E00694C28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E660171CBB4A9E00694C28 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A775C2671CBBE04200F57F52 /* CedHTTPOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CedHTTPOperation.swift; sourceTree = "<group>"; };
 		A7E660101CBB4A9E00694C28 /* CedHttpDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CedHttpDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E660131CBB4A9E00694C28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E660151CBB4A9E00694C28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				A7E660341CBB4B3C00694C28 /* CedHttpStruct.swift */,
 				A7E660361CBB4E0300694C28 /* CedHttp.swift */,
+				A775C2671CBBE04200F57F52 /* CedHTTPOperation.swift */,
 			);
 			path = CedHttp;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				A7E660371CBB4E0300694C28 /* CedHttp.swift in Sources */,
 				A7E660351CBB4B3C00694C28 /* CedHttpStruct.swift in Sources */,
 				A7E660161CBB4A9E00694C28 /* ViewController.swift in Sources */,
+				A775C2681CBBE04200F57F52 /* CedHTTPOperation.swift in Sources */,
 				A7E660141CBB4A9E00694C28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +408,7 @@
 				A7E6602F1CBB4A9E00694C28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7E660301CBB4A9E00694C28 /* Build configuration list for PBXNativeTarget "CedHttpDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +417,7 @@
 				A7E660321CBB4A9E00694C28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
