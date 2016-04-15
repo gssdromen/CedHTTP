@@ -23,14 +23,14 @@ class CedHTTPOperation {
         return tempArray.joinWithSeparator("&")
     }
 
-    class func buildParamsHelper(pair: (String, AnyObject)) -> String {
+    private class func buildParamsHelper(pair: (String, AnyObject)) -> String {
         switch pair.1 {
         case is String:
             return "\(self.escape(pair.0))=\(self.escape(pair.1 as! String))"
         case is Array<String>:
             var tempArray = [String]()
             for value in(pair.1 as! Array<String>) {
-                tempArray.append("\(self.escape(pair.0))=\(self.escape(value))")
+                tempArray.append("\(self.escape(pair.0))[]=\(self.escape(value))")
             }
             return tempArray.joinWithSeparator("&")
         case is Dictionary<String, AnyObject>:

@@ -16,12 +16,6 @@ struct CedHTTPResponse {
 struct CedHTTPRequest {
 }
 
-struct CedHTTPParam {
-}
-
-struct CedHTTPParamItem {
-}
-
 enum CedHTTPMethod {
     case Get
     case Post

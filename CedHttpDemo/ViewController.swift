@@ -22,12 +22,16 @@ class ViewController: UIViewController {
         did["c"] = "d"
         did["di"] = di
 
+        let aa: Array = ["1", "2", "3"]
+
         var did2: Dictionary = Dictionary<String, AnyObject>()
         did2["e"] = "f"
         did2["g"] = "h"
-        did2["did"] = did
+        did2["aa"] = aa
 
-        print(CedHTTP.buildRequestParams(did2))
+        print(CedHTTPOperation.buildRequestParams(did2))
+
+//        print(CedHTTP.makeAsync("http://www.baidu.com", method: CedHTTPMethod.Get, params: nil, response: nil))
     }
 
     override func didReceiveMemoryWarning() {
