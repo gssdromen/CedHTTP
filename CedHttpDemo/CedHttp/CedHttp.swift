@@ -14,37 +14,36 @@ class CedHTTP {
             print("No Request Url")
             return
         }
-        var request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        var request = NSMutableURLRequest(url: URL(string: url)!)
 
         switch method {
         case .Get:
-            request.HTTPMethod = "GET"
+            request.httpMethod = "GET"
             if params != nil {
-                let getUrl = url + "?" + CedHTTPOperation.buildRequestParams(params!)
-                request = NSMutableURLRequest(URL: NSURL(string: getUrl)!)
+                let getUrl = url + "?" + CedHTTPOperation.buildRequestParams(parameters: params!)
+                request = NSMutableURLRequest(url: URL(string: getUrl)!)
             }
             break
         case .Post:
-            request.HTTPMethod = "POST"
+            request.httpMethod = "POST"
             if params != nil {
                 request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-                request.HTTPBody = CedHTTPOperation.buildRequestParams(params!).dataUsingEncoding(NSUTF8StringEncoding)
+                request.httpBody = CedHTTPOperation.buildRequestParams(parameters: params!).data(using: String.Encoding.utf8)
             }
             break
         case .Put:
-            request.HTTPMethod = "PUT"
+            request.httpMethod = "PUT"
             break
         case .Delete:
-            request.HTTPMethod = "DELETE"
+            request.httpMethod = "DELETE"
             break
         }
-
-        NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
+        URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
             if error != nil {
                 print(response)
             } else {
-                if (response as! NSHTTPURLResponse).statusCode == 200 {
-                    print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+                if (response as! HTTPURLResponse).statusCode == 200 {
+                    print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
                 } else {
                     print(response)
                 }
